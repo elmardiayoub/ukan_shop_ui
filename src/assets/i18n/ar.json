@@ -1,0 +1,49 @@
+{
+  "loginComponent": {
+    "signInTitle": "تسجيل الدخول إلى حسابك",
+    "signInTitlePargraph": " Ukan استخدم بيانات هويتك الموحدة على",
+    "usernameLabel": "عنوان البريد الإلكتروني",
+    "usernameRequired": ".البريد الإلكتروني مطلوب",
+    "passwordLabel": "كلمة المرور",
+    "passwordRequired": "كلمة المرور مطلوبة",
+    "signInButton": "متابعة",
+    "rememberMe": "تذكرني",
+    "forgotPassword": "إعادة تعيين كلمة المرور",
+    "notAMember": " ليس لديك حساب؟",
+    "signUp": "تسجيل"
+  },
+  "forgotPasswordComponent": {
+    "forgotPasswordTitle": "غير قادر على تسجيل الدخول؟",
+    "forgotPasswordInstruction": "أدخل عنوان بريدك الإلكتروني وسنرسل إليك رسالة لإعادة تعيين كلمة المرور",
+    "emailLabel": "عنوان البريد الإلكتروني",
+    "emailRequiredError": " .عنوان البريد الإلكتروني مطلوب",
+    "resetPasswordButton": "متابعة",
+    "rememberPasswordPrompt": "تذكر كلمة المرور؟",
+    "signIn": "تسجيل الدخول"
+  },
+  "registerComponent": {
+    "createAccountTitle": "Ukan إنشاء حساب",
+    "accountInfo": " Ukan هوية موحدة لجميع خدمات",
+    "firstNameLabel": "الاسم الشخصي",
+    "lastNameLabel": "الاسم العائلي",
+    "firstNameRequired": ".الاسم الشخصي مطلوب",
+    "lastNameRequired": ".الاسم العائلي مطلوب",
+    "emailLabel": "البريد الإلكتروني",
+    "emailRequired": ".البريد الإلكتروني مطلوب",
+    "passwordLabel": "كلمة المرور",
+    "passwordRequired": ".كلمة المرور مطلوبة (6 أحرف على الأقل).",
+    "phoneValidation"  :{
+      "invalidNumber": ".الرقم غير صالح",
+      "invalidCountryCode": ".رمز البلد غير صالح",
+      "tooShort": ".رقم الهاتف قصير جدًا",
+      "tooLong": ".رقم الهاتف طويل جدًا",
+      "unknownError": ".الرقم غير صالح"
+    },
+    "termsLabel": "أوافق على الشروط والأحكام",
+    "termsRequired": ".يجب أن توافق على الشروط والأحكام",
+    "registerButton": "إنشاء حساب",
+    "alreadyHaveAccount": "لديك حساب بالفعل؟",
+    "signIn": "تسجيل الدخول"
+  }
+  
+}

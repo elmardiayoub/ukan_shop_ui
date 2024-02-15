@@ -1,0 +1,90 @@
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5">
+                <div class="wrap">
+                    <div class="img" style="background-image: url(assets/images/ukan_logo.png);"></div>
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="d-flex text-center">
+                            <div class="w-100 mb-3 ">
+                                <h4 class="mb-3" style="font-weight: 700;">{{ 'registerComponent.createAccountTitle' |
+                                    translate }}
+                                </h4>
+                                <p>{{ 'registerComponent.accountInfo' | translate }}</p>
+                            </div>
+                        </div>
+                        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <input type="text" class="form-control" id="firstName" formControlName="firstName"
+                                        required>
+                                    <label class="form-control-placeholder" for="firstName">{{
+                                        'registerComponent.firstNameLabel' | translate }}</label>
+                                    <div *ngIf="registerForm.get('firstName')?.invalid && (registerForm.get('firstName')?.dirty || registerForm.get('firstName')?.touched)"
+                                        class="text-danger">
+                                        {{ 'registerComponent.firstNameRequired' | translate }}
+                                    </div>
+                                </div>
+                                <div class="form-group col-6">
+                                    <input type="text" class="form-control" id="lastName" formControlName="lastName"
+                                        required>
+                                    <label class="form-control-placeholder" for="lastName">{{
+                                        'registerComponent.lastNameLabel' | translate }}</label>
+                                    <div *ngIf="registerForm.get('lastName')?.invalid && (registerForm.get('lastName')?.dirty || registerForm.get('lastName')?.touched)"
+                                        class="text-danger">
+                                        {{ 'registerComponent.lastNameRequired' | translate }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" formControlName="email" required>
+                                <label class="form-control-placeholder" for="email">{{ 'registerComponent.emailLabel' |
+                                    translate }}</label>
+                                <div *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched)"
+                                    class="text-danger">
+                                    {{ 'registerComponent.emailRequired' | translate }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" formControlName="password"
+                                    required>
+                                <label class="form-control-placeholder" for="password">{{
+                                    'registerComponent.passwordLabel' | translate }}</label>
+                                <div *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)"
+                                    class="text-danger">
+                                    {{ 'registerComponent.passwordRequired' | translate }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="tel" #phoneInput formControlName="phone" maxlength="">
+                                <div *ngIf="registerForm.get('phone')?.errors?.['intlTelInputError']"
+                                    class="text-danger">
+                                    {{ registerForm.get('phone')?.errors?.['intlTelInputError'].message }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-wrap checkbox-primary mb-0">{{ 'registerComponent.termsLabel' |
+                                    translate }}
+                                    <input type="checkbox" id="terms" formControlName="terms">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <div *ngIf="registerForm.get('terms')?.invalid && (registerForm.get('terms')?.dirty || registerForm.get('terms')?.touched)"
+                                    class="text-danger">
+                                    {{ 'registerComponent.termsRequired' | translate }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3"
+                                    [disabled]="registerForm.invalid">
+                                    {{ 'registerComponent.registerButton' | translate }}
+                                </button>
+                            </div>
+                        </form>
+                        <p class="text-center">{{ 'registerComponent.alreadyHaveAccount' | translate }} <a
+                                href="/login">{{ 'registerComponent.signIn' | translate }}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,68 @@
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5">
+                <div class="wrap">
+                    <div class="img" style="background-image: url(assets/images/ukan_logo.png);"></div>
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="d-flex text-center ">
+                            <div class="w-100 ">
+                                <h4 class="mb-3" style="font-weight: 700;">{{ 'loginComponent.signInTitle' | translate
+                                    }}</h4>
+                                <p>{{ 'loginComponent.signInTitlePargraph' | translate }}</p>
+                            </div>
+                        </div>
+                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="signin-form">
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" id="username" formControlName="username"
+                                    required>
+                                <label class="form-control-placeholder" for="username">{{ 'loginComponent.usernameLabel'
+                                    | translate
+                                    }}</label>
+                                <div *ngIf="formControls['username'].invalid && (formControls['username'].dirty || formControls['username'].touched)"
+                                    class="text-danger">
+                                    {{ 'loginComponent.usernameRequired' | translate }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input id="password-field" type="password" class="form-control" id="password"
+                                    formControlName="password" required>
+                                <label class="form-control-placeholder" for="password">{{ 'loginComponent.passwordLabel'
+                                    | translate
+                                    }}</label>
+                                <div *ngIf="formControls['password'].invalid && (formControls['password'].dirty || formControls['password'].touched)"
+                                    class="text-danger">
+                                    {{ 'loginComponent.passwordRequired' | translate }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3"
+                                    [disabled]="loginForm.invalid">{{ 'loginComponent.signInButton' | translate
+                                    }}</button>
+                            </div>
+                            <div class="form-group d-md-flex justify-content-between">
+                                <div class="col-md-6 d-flex align-items-center">
+                                    <label class="checkbox-wrap checkbox-primary mb-0" style="font-size: 14px;">
+                                        {{ 'loginComponent.rememberMe' | translate }}
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="col-md-6 text-md-right" style="font-size: 14px;">
+                                    <a href="/forgot-password" class="text-decoration-none">
+                                        {{ 'loginComponent.forgotPassword' | translate }}
+                                    </a>
+                                </div>
+                            </div>
+
+                        </form>
+                        <p class="text-center">{{ 'loginComponent.notAMember' | translate }} <a href="/register">{{
+                                'loginComponent.signUp' |
+                                translate }}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+{
+    "loginComponent": {
+      "signInTitle": "Sign in to your account",
+      "signInTitlePargraph": "Use your Ukan credentials",
+      "usernameLabel": "E-mail address",
+      "usernameRequired": "Invalid email address.",
+      "passwordLabel": "Password",
+      "passwordRequired": "Password is required",
+      "signInButton": "Continue",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Reset password",
+      "notAMember": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "forgotPasswordComponent": {
+      "forgotPasswordTitle": "Unable to log in?",
+      "forgotPasswordInstruction": "Enter your email address and we'll send you a password reset email.",
+      "emailLabel": "Email Address",
+      "emailRequiredError": "Invalid email address",
+      "resetPasswordButton": "Continue",
+      "rememberPasswordPrompt": "Remember your password?",
+      "signIn": "Sign in"
+    },
+    "registerComponent": {
+      "createAccountTitle": "Create a Ukan account",
+      "accountInfo": "A common identity for all Ukan services",
+      "firstNameLabel": "First Name",
+      "lastNameLabel": "Last Name",
+      "firstNameRequired": "First name required.",
+      "lastNameRequired": "Last name required.",
+      "emailLabel": "E-mail",
+      "emailRequired": "Invalid email.",
+      "passwordLabel": "Password",
+      "passwordRequired": "Password required (minimum 6 characters).",
+      "phoneValidation": {
+        "invalidNumber": "Invalid number",
+        "invalidCountryCode": "Invalid country code",
+        "tooShort": "Phone number too short",
+        "tooLong": "Phone number too long",
+        "unknownError": "Invalid number"
+      },
+      "termsLabel": "I accept the Terms & Conditions",
+      "termsRequired": "You must accept the Terms & Conditions.",
+      "registerButton": "Sign up",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in"
+      
+    }
+      
+      
+  }
+  

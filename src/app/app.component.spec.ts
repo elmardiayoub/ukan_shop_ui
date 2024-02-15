@@ -17,7 +17,7 @@ describe('AppComponent', () => {
   it(`should have the 'ukan_ecom_ui' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ukan_ecom_ui');
+    expect(app.title).toEqual('Ukan Shop');
   });
 
   it('should render title', () => {

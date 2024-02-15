@@ -1,0 +1,49 @@
+{
+  "loginComponent": {
+    "signInTitle": "Connectez-vous à votre compte",
+    "signInTitlePargraph" : "Utilisez vos identifiants Ukan",
+    "usernameLabel": "Adresse e-mail",
+    "usernameRequired": "Adresse email non valide.",
+    "passwordLabel": "Mot de passe",
+    "passwordRequired": "Le mot de passe est requis",
+    "signInButton": "Continuer",
+    "rememberMe": "Se souvenir de moi",
+    "forgotPassword": "Réinitialisation du mot de passe",
+    "notAMember": "Vous n'avez pas de compte ?",
+    "signUp": "S'inscrire"
+  },
+  "forgotPasswordComponent": {
+    "forgotPasswordTitle": "Incapable de se connecter ?",
+    "forgotPasswordInstruction": "Saisissez votre adresse e-mail et nous vous envoyons un e-mail de réinitialisation de mot de passe.",
+    "emailLabel": "Adresse e-mail",
+    "emailRequiredError": "Adresse email invalide",
+    "resetPasswordButton": "Continuer",
+    "rememberPasswordPrompt": "Vous vous souvenez de votre mot de passe ?",
+    "signIn": "Connectez-vous"
+  },
+  "registerComponent": {
+    "createAccountTitle": "Créez un compte Ukan",
+    "accountInfo": "Une identité commune pour tous les services Ukan",
+    "firstNameLabel": "Prénom",
+    "lastNameLabel": "Nom",
+    "firstNameRequired": "Prénom obligatoire.",
+    "lastNameRequired": "Nom obligatoire.",
+    "emailLabel": "E-mail",
+    "emailRequired": "Email invalide.",
+    "passwordLabel": "Mot de passe",
+    "passwordRequired": "Mot de passe obligatoire (minimum 6 caractères).",
+    "phoneValidation" : {
+      "invalidNumber": "Numéro invalide",
+      "invalidCountryCode": "Code pays invalide",
+      "tooShort": "Numéro de téléphone trop court",
+      "tooLong": "Numéro de téléphone trop long",
+      "unknownError": "Numéro invalide"
+    },
+    "termsLabel": "J'accepte les Conditions Générales d'utilisation",
+    "termsRequired": "Vous devez accepter les Conditions Générales d'utilisation.",
+    "registerButton": "S'inscrire",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "signIn": "Se connecter"
+  }
+
+}
