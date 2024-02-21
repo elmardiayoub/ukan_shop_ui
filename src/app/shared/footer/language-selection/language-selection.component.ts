@@ -53,7 +53,8 @@ export class LanguageSelectionComponent implements OnInit {
     this.toggleLanguageOptions();
     this.translate.use(language);
 
-
-    localStorage.setItem('userLanguage', language);
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('userLanguage', language);
+    }
   }
 }

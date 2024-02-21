@@ -1,0 +1,6 @@
+export enum AccountStatus {
+    CREATED = 'CREATED',
+    ACTIVATED = 'ACTIVATED',
+    DEACTIVATED = 'DEACTIVATED',
+    SUSPENDED = 'SUSPENDED',
+}

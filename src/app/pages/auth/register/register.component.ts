@@ -1,9 +1,11 @@
-import { Component, ElementRef, Inject, OnInit, ChangeDetectorRef, PLATFORM_ID, ViewChild, OnDestroy } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ChangeDetectorRef, PLATFORM_ID, ViewChild, OnDestroy, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import intTelInput from 'intl-tel-input';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { AuthService } from '../../../services/pages/auth/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -21,15 +23,22 @@ export class RegisterComponent implements OnInit, OnDestroy {
   intlTelInputInstance: any;
   private validatePhone: (() => void) | undefined;
 
+  isSubmitting: boolean = false;
+  showErrorPopup: boolean = false;
+  errorMessage: string = '';
+
 
   @ViewChild('phoneInput') phoneInput!: ElementRef;
-
+  router = inject(Router);
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private formBuilder: FormBuilder,
     private cdr: ChangeDetectorRef,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private authService: AuthService
   ) { }
+
+
 
   ngOnInit(): void {
     this.initializeRegisterForm();
@@ -99,10 +108,33 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
   onSubmit(): void {
     if (this.registerForm.invalid) {
-      console.log("ERRORS")
+      console.log("Form is invalid");
       return;
     }
+    this.isSubmitting = true;
+    const phoneNumber = this.intlTelInputInstance.getNumber();
 
-    console.log('Registration submitted', this.registerForm.value);
+    const { firstName, lastName, email, password } = this.registerForm.value;
+
+
+    this.authService.createUser(email, phoneNumber, password, firstName, lastName).subscribe({
+      next: (response) => {
+        console.log('User created successfully', response);
+        this.router.navigate(['/verify-email']);
+        if (isPlatformBrowser(this.platformId)) {
+          localStorage.setItem('emailUser', email);
+        }
+      },
+      error: (error) => {
+        console.error('Error creating user', error);
+        this.isSubmitting = false;
+        this.registerForm.controls['password'].reset();
+        this.showErrorPopup = true;
+        this.errorMessage = error.error.message || 'An unexpected error occurred';
+        setTimeout(() => {
+          this.showErrorPopup = false;
+        }, 3500);
+      }
+    });
   }
 }

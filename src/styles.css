@@ -8152,10 +8152,10 @@ a {
     outline: none !important;
     -webkit-box-shadow: none;
     box-shadow: none; }
-  /* a:hover, a:active, a:focus {
+  a:hover, a:active, a:focus {
     color: #01d28e;
     outline: none !important;
-    text-decoration: none !important; } */
+    text-decoration: none !important; }
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
@@ -8256,19 +8256,18 @@ h1, h2, h3, h4, h5,
   -o-transition: all 400ms;
   transition: all 400ms;
   opacity: .6; }
-
 .form-control-placeholder.has-value,
 .form-control:focus + .form-control-placeholder,
 .form-control:valid + .form-control-placeholder {
-  -webkit-transform: translate3d(0, -120%, 0);
-  transform: translate3d(0, -120%, 0);
+  -webkit-transform: translate3d(0, -120%, 0) !important;
+  transform: translate3d(0, -120%, 0) !important;
   padding: 7px 0 0 0;
   opacity: 1;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1px;
   color: #01d28e;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 
@@ -8372,6 +8371,31 @@ h1, h2, h3, h4, h5,
         border: 1px solid transparent;
         background: #01d28e;
         color: #fff; }
+
+
+  .error-popup {
+    top: unset !important; 
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px; 
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    max-width: 300px; 
+    font-size: 14px; 
+    text-align: center; 
+    width: auto;
+    max-width: 300px;
+    font-size: 14px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden; 
+  }
+        
+        
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

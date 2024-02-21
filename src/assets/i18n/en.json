@@ -45,8 +45,15 @@
       "alreadyHaveAccount": "Already have an account?",
       "signIn": "Sign in"
       
+    },
+    "verifyEmailComponent": {
+      "checkYourEmail": "Check your inbox !",
+      "instruction": "We've sent a password reset link to",
+      "notReceivedEmail": "Didn't receive a link? ",
+      "resendEmail": " Try again",
+      "alreadyVerified": "Already verified?",
+      "login": "Log in"
     }
-      
       
   }
   

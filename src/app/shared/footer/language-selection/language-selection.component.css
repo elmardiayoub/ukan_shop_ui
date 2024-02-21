@@ -1,43 +1,41 @@
 .language-selection {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  z-index: 100;
+  bottom: 20px; 
+  right: 20px;
+  z-index: 100; 
 }
 
 .language-select-btn {
-  display: flex;
+  display: flex; 
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
   width: auto;
-  gap: 10px;
-  padding: 0.5em 0.75em;
-  cursor: pointer;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 0.25em;
+  gap: 10px; 
+  padding: 0.5em 0.75em; 
+  cursor: pointer; 
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+  border-radius: 0.25em; 
 }
 
 .language-options {
-  position: absolute;
-  right: 0;
-  bottom: 100%;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 0.25em;
+  position: absolute; 
+  right: 0; 
+  bottom: 100%; 
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+  border-radius: 0.25em; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  width: max-content;
+  width: max-content; 
   margin-bottom: 5px;
 }
 
 .language-option {
-  padding: 0.5em 0.75em;
-  cursor: pointer;
-  display: block;
+  padding: 0.5em 0.75em; 
+  cursor: pointer; 
+  display: block; 
 }
 
 .language-option:hover {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; 
 }

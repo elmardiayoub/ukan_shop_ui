@@ -44,6 +44,14 @@
     "registerButton": "S'inscrire",
     "alreadyHaveAccount": "Vous avez déjà un compte ?",
     "signIn": "Se connecter"
+  },
+  "verifyEmailComponent": {
+    "checkYourEmail": "Consultez votre boîte de réception !",
+    "instruction": "Nous avons envoyé un lien de réinitialisation du mot de passe à",
+    "notReceivedEmail": "Vous n'avez pas reçu de lien ?",
+    "resendEmail": "Réessayer",
+    "alreadyVerified": "Déjà vérifié ?",
+    "login": "Connexion"
   }
 
 }

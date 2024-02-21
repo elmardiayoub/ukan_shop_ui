@@ -44,6 +44,14 @@
     "registerButton": "إنشاء حساب",
     "alreadyHaveAccount": "لديك حساب بالفعل؟",
     "signIn": "تسجيل الدخول"
+  },
+  "verifyEmailComponent": {
+    "checkYourEmail": "! تحقق من علبة  الرسائل الخاصة بك",
+    "instruction": "تم إرسال رابط إعادة تعيين كلمة المرور إلى",
+    "notReceivedEmail": "لم تحصل على الرابط ؟",
+    "resendEmail": "إعادة المحاولة",
+    "alreadyVerified": "تم الإستلام ؟",
+    "login": "تسجيل الدخول"
   }
   
 }
